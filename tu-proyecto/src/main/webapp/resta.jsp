@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<!--  Prueba en :  http://localhost:8080/tu-proyecto/resta.jsp?numero1=10&numero2=20 -->
+<!--  Prueba en :  http://localhost:8080/tu-proyecto/suma.jsp?numero1=10&numero2=20 -->
     <title>Resta Simple</title>
 </head>
 <body>
@@ -12,14 +12,12 @@
     <%
     	Calculadora calc = new CalculadoraImpl();
         // Obtener los parámetros de la solicitud
-        /**
         String numero1Str = request.getParameter("numero1");
         String numero2Str = request.getParameter("numero2");
-        */
         
         // Convertir los parámetros a tipo int
-        double numero1 = 10;//Double.parseDouble(numero1Str);
-        double numero2 = 20;//Double.parseDouble(numero2Str);
+        double numero1 = Double.parseDouble(numero1Str);
+        double numero2 = Double.parseDouble(numero2Str);
         
         // Realizar la suma
         double resultado = calc.restar(numero1, numero2);
